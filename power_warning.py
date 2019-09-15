@@ -4,7 +4,7 @@ import subprocess
 
 def ac_power_status():
     """
-    Checks the status if my laptop is charging or not. 
+    Checks the status if my laptop is charging or not.
     return: True/False
     """
     ac_status = subprocess.Popen(["pmset -g batt"], shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
