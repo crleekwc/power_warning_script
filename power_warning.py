@@ -14,7 +14,7 @@ def ac_power_status():
 def send_text_message():
     """
     Sends a text message by using an Apple Script, telling me to "Check AC Power of home-server..."
-    return: subprocess status code
+    return: True if subprocess status code == 0, else False
     """
     send_message = subprocess.run(['osascript', '-e', 'tell application "Messages" to send "Check AC Power of home-server..." to buddy "<input phone number here>" of service "SMS"'])
     return (send_message.returncode == 0)
